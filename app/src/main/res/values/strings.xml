@@ -1,3 +1,26 @@
 <resources>
-    <string name="app_name">Centri-Master-App</string>
+    <string name="app_name">CentriApp</string>
+    <string name="title_activity_nav_d">NavDActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_add_device">Add Device</string>
+    <string name="menu_account">Account</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_order">Order Propane</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_delete_device">Delete Device</string>
+    <string name="delete_device_notice">Are you sure you want to delete your %s monitor?</string>
+    <string name="order_confirm_notice">Once confirmed, you will receive\n an email confirmation for the order.\n\n\nOrders are fulfilled within \n5 business days between \nOctober and April, \nand 10 business days between \nMay and September.\n\n\nFord Propane will contact you regarding your order invoice.</string>
+    <string name="order_confirm_success_notice">Your order has been placed. You will receive an email confirmation shortly.\n\n\n%s will contact you regarding the order invoice.</string>
+    <string name="menu_request_monitor">Request Monitor</string>
 </resources>

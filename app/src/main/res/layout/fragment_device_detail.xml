@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".fragments.OrderDetailFragment"
+            android:background="@color/colorPrimaryWhite">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                tools:context=".fragments.DeviceDetailFragment">
+
+                <TextView
+                    android:id="@+id/tvDeviceName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli_bold"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="Home"
+                    android:textAlignment="textStart"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.centri.centri_master_app.custom.views.HalfGauge
+                        android:id="@+id/halfGauge"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="-50dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvDeviceLvl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        android:fontFamily="@font/muli_bold"
+                        android:text="28.0%"
+                        android:textAlignment="textStart"
+                        android:textColor="#000000"
+                        android:textSize="24sp" />
+
+                </RelativeLayout>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="-10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/muli_bold"
+                        android:padding="10dp"
+                        android:text="Average Daily Usage"
+                        android:textAlignment="textStart"
+                        android:textColor="#5F5F5F"
+                        android:textSize="20sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvDailyUses"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/muli_bold"
+                        android:padding="10dp"
+                        android:text="1.2 gallons per day"
+                        android:textAlignment="textEnd"
+                        android:textColor="#000000"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_above="@id/rl_device_detail_bottom">
+
+                <Button
+                    android:id="@+id/btn_order_propane"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/txt_input_blue"
+                    android:elevation="0dp"
+                    android:fontFamily="@font/muli_bold"
+                    android:letterSpacing=".33"
+                    android:text="Order Propane"
+                    android:textColor="@color/colorPrimaryWhite"
+                    android:textSize="20sp"
+                    android:onClick="@{onClick}" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_device_detail_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:padding="20dp"
+                android:background="@color/colorPrimaryWhite">
+
+                <TextView
+                    android:id="@+id/tv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:onClick="@{onClick}"
+                    android:text="Back"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/muli_bold" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+</layout>

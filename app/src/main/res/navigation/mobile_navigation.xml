@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_dashboard">
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.centri.centri_master_app.fragments.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_nav_dashboard_to_nav_add"
+            app:destination="@id/nav_add" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/deviceDetailFragment"
+        android:name="com.centri.centri_master_app.fragments.DeviceDetailFragment"
+        android:label=""
+        tools:layout="@layout/fragment_device_detail" />
+
+    <fragment
+        android:id="@+id/deleteDeviceFragment"
+        android:name="com.centri.centri_master_app.fragments.DeleteDeviceFragment"
+        android:label="Delete Device"
+        tools:layout="@layout/fragment_delete_device" />
+
+    <activity
+        android:id="@+id/nav_add"
+        android:name="com.centri.centri_master_app.activities.AddDeviceActivity"
+        android:label="Add Device"
+        tools:layout="@layout/activity_add_device" />
+
+    <activity
+        android:id="@+id/nav_account_activity"
+        android:name="com.centri.centri_master_app.activities.AccountActivity"
+        android:label="Account"
+        tools:layout="@layout/activity_account" />
+
+    <activity
+        android:id="@+id/nav_order"
+        android:name="com.centri.centri_master_app.activities.OrderActivity"
+        android:label="OrderActivity"
+        tools:layout="@layout/activity_order"/>
+</navigation>

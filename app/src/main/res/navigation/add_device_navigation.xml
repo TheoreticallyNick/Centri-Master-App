@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_device_navigation"
+    app:startDestination="@id/nav_add">
+
+    <fragment
+        android:id="@+id/nav_add"
+        android:name="com.centri.centri_master_app.fragments.AddDeviceFragment"
+        android:label="Add Device"
+        tools:layout="@layout/fragment_add_device" >
+        <action
+            android:id="@+id/action_nav_add_to_deviceIdFragment"
+            app:destination="@id/deviceIdFragment" />
+        <action
+            android:id="@+id/action_nav_add_to_request_monitor"
+            app:destination="@id/requestMonitorFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/deviceIdFragment"
+        android:name="com.centri.centri_master_app.fragments.DeviceIdFragment"
+        android:label="Add Device"
+        tools:layout="@layout/fragment_device_id" >
+        <action
+            android:id="@+id/action_deviceIdFragment_to_deviceAuthFragment"
+            app:destination="@id/deviceAuthFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/deviceAuthFragment"
+        android:name="com.centri.centri_master_app.fragments.DeviceAuthFragment"
+        android:label="Add Device"
+        tools:layout="@layout/fragment_device_auth" >
+        <action
+            android:id="@+id/action_deviceAuthFragment_to_successFragment"
+            app:destination="@id/successFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/requestMonitorFragment"
+        android:name="com.centri.centri_master_app.fragments.RequestMonitorFragment"
+        android:label="Request Monitor Info"
+        tools:layout="@layout/fragment_request_monitor">
+        <action
+            android:id="@+id/action_requestMonitorFragment_to_orderSuccessFragment"
+            app:destination="@id/orderSuccessFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/orderSuccessFragment"
+        android:name="com.centri.centri_master_app.fragments.SuccessFragment"
+        android:label="{app_bar_title}"
+        tools:layout="@layout/fragment_success">
+        <argument
+            android:name="app_bar_title"
+            android:defaultValue="Order Confirmed"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.centri.centri_master_app.fragments.SuccessFragment"
+        android:label="Success"
+        tools:layout="@layout/fragment_success" />
+
+
+
+</navigation>

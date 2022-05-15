@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/account_navigation"
+    app:startDestination="@id/account_fragment">
+
+    <fragment
+        android:id="@+id/account_fragment"
+        android:name="com.centri.centri_master_app.fragments.AccountFragment"
+        android:label="Account"
+        tools:layout="@layout/fragment_account">
+        <action
+            android:id="@+id/action_account_fragment_to_editAccountFragment"
+            app:destination="@id/editAccountFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/editAccountFragment"
+        android:name="com.centri.centri_master_app.fragments.EditAccountFragment"
+        android:label="Account"
+        tools:layout="@layout/fragment_edit_account">
+        <action
+            android:id="@+id/action_editAccountFragment_to_successFragment"
+            app:destination="@id/successFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_editAccountFragment_to_verificationFragment"
+            app:destination="@id/verificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="com.centri.centri_master_app.fragments.SuccessFragment"
+        android:label="Success"
+        tools:layout="@layout/fragment_success"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+    <fragment
+        android:id="@+id/verificationFragment"
+        android:name="com.centri.centri_master_app.fragments.VerificationFragment"
+        android:label="Authentication Code"
+        tools:layout="@layout/fragment_verification">
+        <action
+            android:id="@+id/action_verificationFragment_to_successFragment"
+            app:destination="@id/successFragment" />
+    </fragment>
+</navigation>

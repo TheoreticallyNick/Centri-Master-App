@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.OrderDetailFragment"
+        android:background="@color/colorPrimaryWhite">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/muli"
+            android:textSize="22sp"
+            android:textAlignment="center"
+            android:text="@string/order_confirm_notice"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_order_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="20dp"
+            android:background="@color/colorPrimaryWhite">
+
+            <TextView
+                android:id="@+id/tv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:onClick="@{onClick}"
+                android:text="Back"
+                android:textSize="22sp"
+                android:fontFamily="@font/muli_bold" />
+
+            <TextView
+                android:id="@+id/tv_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:onClick="@{onClick}"
+                android:text="Confirm"
+                android:textColor="@color/colorPrimaryBlue"
+                android:textSize="22sp"
+                android:fontFamily="@font/muli_bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        tools:context=".fragments.DeviceAuthFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_hint"
+                android:layout_above="@id/ll_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/muli"
+                android:padding="10dp"
+                android:text="Enter the propane tank monitor activation code provided by Ford Propane."
+                android:textAlignment="center"
+                android:textSize="22sp" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli_bold"
+                    android:text="Activation Code"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSecondaryGrey"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/etDeviceAuth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/txt_input_grey"
+                    android:ems="10"
+                    android:fontFamily="@font/muli"
+                    android:hint="Ex: 233415"
+                    android:inputType="text"
+                    android:textColor="@color/colorPrimaryBlack"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:padding="20dp"
+                android:background="@color/colorPrimaryWhite">
+
+                <TextView
+                    android:id="@+id/tv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="Back"
+                    android:onClick="@{onClick}"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/muli_bold" />
+
+                <TextView
+                    android:id="@+id/tv_done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Done"
+                    android:onClick="@{onClick}"
+                    android:textColor="@color/colorPrimaryBlue"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/muli_bold" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+</layout>

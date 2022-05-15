@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.OrderDetailFragment"
+        android:background="@color/colorPrimaryWhite">
+
+        <ScrollView
+            android:id="@+id/sv_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_above="@id/rl_order_bottom"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/order_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:showDividers="middle">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Please enter the following details regarding the propane order. "
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSecondaryGrey"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="15dp"
+                    android:text="Street Address of Propane Tank"
+                    android:textColor="@color/colorSecondaryGrey"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtOrderStreet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/txt_input_grey"
+                    android:ems="10"
+                    android:fontFamily="@font/muli"
+                    android:hint="Address"
+                    android:inputType="text"
+                    android:textColor="@color/colorPrimaryBlack"
+                    android:textCursorDrawable="@drawable/txt_cursor"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="15dp"
+                    android:text="City"
+                    android:textColor="@color/colorSecondaryGrey"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtOrderCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/txt_input_grey"
+                    android:ems="10"
+                    android:fontFamily="@font/muli"
+                    android:hint="City"
+                    android:inputType="text"
+                    android:textColor="@color/colorPrimaryBlack"
+                    android:textCursorDrawable="@drawable/txt_cursor"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="15dp"
+                    android:text="State"
+                    android:textColor="@color/colorSecondaryGrey"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtOrderState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/txt_input_grey"
+                    android:ems="10"
+                    android:fontFamily="@font/muli"
+                    android:hint="State"
+                    android:inputType="text"
+                    android:textColor="@color/colorPrimaryBlack"
+                    android:textCursorDrawable="@drawable/txt_cursor"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="15dp"
+                    android:text="Zip Code"
+                    android:textColor="@color/colorSecondaryGrey"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtOrderZip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/txt_input_grey"
+                    android:ems="10"
+                    android:fontFamily="@font/muli"
+                    android:hint="Zip Code"
+                    android:inputType="text"
+                    android:textColor="@color/colorPrimaryBlack"
+                    android:textCursorDrawable="@drawable/txt_cursor"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="15dp"
+                    android:text="Propane Tank Size (Gallons)"
+                    android:textColor="@color/colorSecondaryGrey"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtOrderTankSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/txt_input_grey"
+                    android:ems="10"
+                    android:fontFamily="@font/muli"
+                    android:hint="Example: 500"
+                    android:inputType="number"
+                    android:textColor="@color/colorPrimaryBlack"
+                    android:textCursorDrawable="@drawable/txt_cursor"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="15dp"
+                    android:text="Current Propane Tank Level (%)"
+                    android:textColor="@color/colorSecondaryGrey"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/txtOrderTankLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/txt_input_grey"
+                    android:ems="10"
+                    android:fontFamily="@font/muli"
+                    android:hint="Example: 35"
+                    android:inputType="number"
+                    android:textColor="@color/colorPrimaryBlack"
+                    android:textCursorDrawable="@drawable/txt_cursor"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/footer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorPrimaryBlue"
+                        android:fontFamily="@font/muli"
+                        android:text="Don’t have a tank monitor?" />
+
+                    <TextView
+                        android:id="@+id/btnInfo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:text="INFO"
+                        android:fontFamily="@font/muli"
+                        android:textSize="20sp"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorPrimaryBlue"
+                        android:onClick="@{onClick}" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rl_order_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="20dp"
+            android:background="@color/colorPrimaryWhite">
+
+            <TextView
+                android:id="@+id/tv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:onClick="@{onClick}"
+                android:text="Back"
+                android:textSize="22sp"
+                android:fontFamily="@font/muli_bold" />
+
+            <TextView
+                android:id="@+id/tv_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/muli_bold"
+                android:onClick="@{onClick}"
+                android:text="Next"
+                android:textColor="@color/colorPrimaryBlue"
+                android:textSize="22sp"/>
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:visibility="gone"
+            android:layout_centerInParent="true"/>
+
+
+    </RelativeLayout>
+</layout>

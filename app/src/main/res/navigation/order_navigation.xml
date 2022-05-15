@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/order_navigation">
+
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        android:name="com.centri.centri_master_app.fragments.OrderDetailFragment"
+        android:label="Order Propane">
+        <action
+            android:id="@+id/action_orderDetailFragment_to_orderConfirmFragment"
+            app:destination="@id/orderConfirmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderConfirmFragment"
+        android:name="com.centri.centri_master_app.fragments.OrderConfirmFragment"
+        android:label="Order Propane">
+        <action
+            android:id="@+id/action_orderConfirmFragment_to_orderSuccessFragment"
+            app:destination="@id/orderSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderSuccessFragment"
+        android:name="com.centri.centri_master_app.fragments.SuccessFragment"
+        android:label="{app_bar_title}">
+        <argument
+            android:name="app_bar_title"
+            android:defaultValue="Order Confirmed"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestMonitorFragment"
+        android:name="com.centri.centri_master_app.fragments.RequestMonitorFragment"
+        android:label="Request Monitor Info">
+        <action
+            android:id="@+id/action_requestMonitorFragment_to_orderSuccessFragment"
+            app:destination="@id/orderSuccessFragment" />
+    </fragment>
+</navigation>

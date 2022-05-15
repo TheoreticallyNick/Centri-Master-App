@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        tools:context=".fragments.VerificationFragment"
+        android:background="@color/colorPrimaryWhite">
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/llCodeInput"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/muli"
+            android:padding="10dp"
+            android:text="An email has been with a \n6 digit authentication code."
+            android:textAlignment="center"
+            android:textSize="22sp" />
+
+        <LinearLayout
+            android:id="@+id/llCodeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/muli"
+                android:paddingStart="0dp"
+                android:paddingEnd="15dp"
+                android:text="Enter Code"
+                android:textColor="@color/colorSecondaryGrey"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/txtCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/txt_input_grey"
+                android:ems="10"
+                android:fontFamily="@font/muli"
+                android:hint="Enter Code"
+                android:inputType="text"
+                android:textColor="@color/colorPrimaryBlack"
+                android:textCursorDrawable="@drawable/txt_cursor"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llCodeInput"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/txt_input_blue"
+            android:elevation="0dp"
+            android:fontFamily="@font/muli_bold"
+            android:letterSpacing=".33"
+            android:text="CONFIRM"
+            android:textColor="@color/colorPrimaryWhite"
+            android:textSize="20sp"
+            android:onClick="@{onClick}" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginStart="20dp"
+            android:onClick="@{onClick}"
+            android:padding="10dp"
+            android:text="Cancel"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:fontFamily="@font/muli_bold" />
+
+    </RelativeLayout>
+</layout>

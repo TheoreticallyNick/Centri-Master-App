@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:fillViewport="true"
+        tools:context=".fragments.AddDeviceFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryWhite">
+
+            <TextView
+                android:id="@+id/tv_hint"
+                android:layout_above="@id/ll_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                android:fontFamily="@font/muli"
+                android:text="Enter the name of the tank monitor.\n For example: “Home”" />
+
+            <LinearLayout
+                android:id="@+id/ll_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/muli_bold"
+                    android:text="Tank Monitor Name"
+                    android:textColor="@color/colorSecondaryGrey" />
+
+                <EditText
+                    android:id="@+id/etDeviceName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/txt_input_grey"
+                    android:ems="10"
+                    android:fontFamily="@font/muli"
+                    android:inputType="text"
+                    android:textColor="@color/colorPrimaryBlack"
+                    android:textSize="16sp"
+                    android:hint="Ex: Home" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/request_monitor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:layout_above="@id/footer"
+                android:background="@color/colorPrimaryWhite">
+
+                <LinearLayout
+                    android:id="@+id/ll_request_monitor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorPrimaryBlue"
+                        android:fontFamily="@font/muli"
+                        android:text="Don’t have a tank monitor?" />
+
+                    <TextView
+                        android:id="@+id/btnInfo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:text="INFO"
+                        android:fontFamily="@font/muli"
+                        android:textSize="20sp"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorPrimaryBlue"
+                        android:onClick="@{onClick}" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimaryWhite">
+
+                <TextView
+                    android:id="@+id/tv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/muli_bold"
+                    android:onClick="@{onClick}"
+                    android:text="Cancel" />
+
+                <TextView
+                    android:id="@+id/tv_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="22sp"
+                    android:textColor="@color/colorPrimaryBlue"
+                    android:fontFamily="@font/muli_bold"
+                    android:onClick="@{onClick}"
+                    android:text="Next" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+</layout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+        <variable
+            name="user"
+            type="com.centri.centri_master_app.data.models.User" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:background="@color/colorPrimaryWhite"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context=".activities.LoginActivity">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/topLabelBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentTop="true"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toStartOf="@id/imageView2"
+                        android:fontFamily="@font/muli_bold"
+                        android:gravity="center_vertical"
+                        android:letterSpacing=".125"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:text="Centri App Login"
+                        android:textColor="@color/colorPrimaryBlue"
+                        android:textSize="24sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignParentEnd="true"
+                        app:srcCompat="@drawable/vec_logo" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_below="@id/topLabelBar"
+                    android:layout_above="@id/footer"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:showDividers="middle">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="15dp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/muli"
+                        android:text="Email"
+                        android:textColor="@color/colorSecondaryGrey" />
+
+                    <EditText
+                        android:id="@+id/txtEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/txt_input_grey"
+                        android:ems="10"
+                        android:fontFamily="@font/muli"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/colorPrimaryBlack"
+                        android:textCursorDrawable="@drawable/txt_cursor"
+                        android:textSize="16sp"
+                        android:hint="Email"
+                        android:text="@={user.UserEmail}" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="15dp"
+                        android:text="Password"
+                        android:fontFamily="@font/muli"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorSecondaryGrey" />
+
+                    <EditText
+                        android:id="@+id/txtPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/txt_input_grey"
+                        android:ems="10"
+                        android:fontFamily="@font/muli"
+                        android:inputType="textPassword"
+                        android:textColor="@color/colorPrimaryBlack"
+                        android:textCursorDrawable="@drawable/txt_cursor"
+                        android:textSize="16sp"
+                        android:hint="Password"
+                        android:text="@={user.UserPass}" />
+
+                    <TextView
+                        android:id="@+id/btnForgotPass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="15dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="15dp"
+                        android:text="Forgot Password?"
+                        android:fontFamily="@font/muli"
+                        android:textAlignment="viewEnd"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorPrimaryBlue"
+                        android:onClick="@{onClick}" />
+
+                    <Button
+                        android:id="@+id/btnLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/txt_input_blue"
+                        android:elevation="0dp"
+                        android:fontFamily="@font/muli_bold"
+                        android:letterSpacing=".33"
+                        android:text="Login"
+                        android:textColor="@color/colorPrimaryWhite"
+                        android:textSize="20sp"
+                        android:onClick="@{onClick}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/footer"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="20dp"
+                    android:showDividers="middle">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorSecondaryGrey"
+                        android:fontFamily="@font/muli"
+                        android:text="Don't have an account?" />
+
+                    <TextView
+                        android:id="@+id/btnSignup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  Sign Up"
+                        android:fontFamily="@font/muli"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorPrimaryBlue"
+                        android:onClick="@{onClick}" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</layout>

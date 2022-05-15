@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.SuccessFragment"
+        android:background="@color/colorPrimaryWhite">
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="22dp"
+            android:fontFamily="@font/muli"
+            android:padding="10dp"
+            android:text="Msg"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_navigate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:padding="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="Done"
+            android:onClick="@{onClick}"
+            android:textColor="@color/colorPrimaryBlue"
+            android:fontFamily="@font/muli_bold"
+            android:textSize="22sp"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</layout>

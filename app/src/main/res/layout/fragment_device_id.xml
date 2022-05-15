@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:fillViewport="true"
+        tools:context=".fragments.DeviceIdFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryWhite">
+
+            <TextView
+                android:id="@+id/tv_hint"
+                android:layout_above="@id/img_qr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                android:fontFamily="@font/muli"
+                android:text="Scan the QR code from the activation email. You can also find the QR code on the back of the propane tank monitor.\n\nClick below to activate scanner." />
+
+            <ImageView
+                android:id="@+id/img_qr"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+                android:layout_centerInParent="true"
+                android:onClick="@{onClick}"
+                android:src="@drawable/ic_qr" />
+
+            <LinearLayout
+                android:id="@+id/ll_input"
+                android:layout_below="@id/img_qr"
+                android:layout_marginTop="45dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muli_bold"
+                    android:text="Tank Monitor ID"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorSecondaryGrey"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/etDeviceId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/txt_input_grey"
+                    android:ems="10"
+                    android:fontFamily="@font/muli"
+                    android:inputType="text"
+                    android:textColor="@color/colorPrimaryBlack"
+                    android:textSize="16sp"
+                    android:hint="Ex: 1234abcd-12ab-34cd-5678-1234abcd" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimaryWhite">
+
+                <TextView
+                    android:id="@+id/tv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/muli_bold"
+                    android:onClick="@{onClick}"
+                    android:text="Back" />
+
+                <TextView
+                    android:id="@+id/tv_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="22sp"
+                    android:textColor="@color/colorPrimaryBlue"
+                    android:fontFamily="@font/muli_bold"
+                    android:onClick="@{onClick}"
+                    android:text="Next" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+</layout>
