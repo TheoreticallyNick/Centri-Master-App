@@ -1,2 +1,3 @@
-rootProject.name = "Centri-Master-App"
 include ':app'
+rootProject.name = "Centri-Master-App"
+

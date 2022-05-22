@@ -25,7 +25,7 @@
             android:background="@color/colorPrimaryWhite"
             android:fillViewport="true"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            tools:context=".activities.SignUpSuccessActivity">
+            tools:context=".activities.LoginActivity">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -49,7 +49,7 @@
                         android:letterSpacing=".125"
                         android:paddingStart="20dp"
                         android:paddingEnd="20dp"
-                        android:text="Success"
+                        android:text="Authentication Code"
                         android:textColor="@color/colorPrimaryBlue"
                         android:textSize="24sp" />
 
@@ -64,7 +64,7 @@
                 <LinearLayout
                     android:layout_below="@id/topLabelBar"
                     android:layout_above="@id/buttonBar"
-                    android:gravity="center"
+                    android:gravity="top"
                     android:layout_centerInParent="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -83,8 +83,32 @@
                         android:textSize="22sp"
                         android:textAlignment="center"
                         android:fontFamily="@font/muli"
-                        android:text="Your account was successfully created."
+                        android:text="An email has been sent to your inbox with a 6 digit authentication code."
                         android:textColor="@color/colorSecondaryGrey" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="15dp"
+                        android:text="Enter Code"
+                        android:fontFamily="@font/muli"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorSecondaryGrey" />
+
+                    <EditText
+                        android:id="@+id/txtUserCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/txt_input_grey"
+                        android:ems="10"
+                        android:fontFamily="@font/muli"
+                        android:inputType="text"
+                        android:textColor="@color/colorPrimaryBlack"
+                        android:textCursorDrawable="@drawable/txt_cursor"
+                        android:textSize="16sp"
+                        android:hint="Enter Code"
+                        android:text="@={user.UserCode}" />
 
                 </LinearLayout>
 
@@ -93,35 +117,47 @@
                     android:layout_above="@id/footer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_margin="0dp"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
                     android:showDividers="middle">
 
-                    <TextView
-                        android:id="@+id/btnReturn"
-                        android:layout_width="wrap_content"
+                    <Button
+                        android:id="@+id/btnConfirm"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Return to Login"
+                        android:background="@drawable/txt_input_blue"
+                        android:elevation="0dp"
                         android:fontFamily="@font/muli_bold"
-                        android:textSize="22sp"
-                        android:textColor="@color/colorPrimaryBlue"
+                        android:letterSpacing=".33"
+                        android:text="CONFIRM"
+                        android:textColor="@color/colorPrimaryWhite"
+                        android:textSize="20sp"
                         android:onClick="@{onClick}" />
-
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/footer"
-                    android:layout_alignParentBottom="true"
                     android:layout_width="match_parent"
-                    android:layout_height="20dp"
+                    android:layout_height="62dp"
+                    android:layout_alignParentBottom="true"
                     android:layout_marginTop="10dp"
                     android:gravity="left"
                     android:orientation="horizontal"
-                    android:padding="20dp"
+                    android:padding="16dp"
                     android:showDividers="middle">
+
+                    <TextView
+                        android:id="@+id/btnBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/muli_bold"
+                        android:onClick="@{onClick}"
+                        android:text="Back"
+                        android:textColor="@color/colorSecondaryGrey"
+                        android:textSize="22sp" />
 
                 </LinearLayout>
 

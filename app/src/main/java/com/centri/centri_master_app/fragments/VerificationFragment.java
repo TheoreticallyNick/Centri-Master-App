@@ -27,11 +27,11 @@ import androidx.navigation.Navigation;
 
 import com.amplifyframework.auth.AuthUserAttributeKey;
 import com.amplifyframework.core.Amplify;
-import com.centri.mypropane.R;
-import com.centri.mypropane.databinding.FragmentVerificationBinding;
-import com.centri.mypropane.utils.DialogUtils;
-import com.centri.mypropane.utils.Enums;
-import com.centri.mypropane.utils.FunctionUtils;
+import com.centri.centri_master_app.R;
+import com.centri.centri_master_app.databinding.FragmentVerificationBinding;
+import com.centri.centri_master_app.utils.DialogUtils;
+import com.centri.centri_master_app.utils.Enums;
+import com.centri.centri_master_app.utils.FunctionUtils;
 
 public class VerificationFragment extends Fragment implements View.OnClickListener {
 
@@ -96,9 +96,9 @@ public class VerificationFragment extends Fragment implements View.OnClickListen
                     DialogUtils.buildMultiUseInfoDialog(getContext(), "Wrong auth code").show();
                 } else if (id == R.id.successFragment) {
                     Bundle bundle = new Bundle();
-                    bundle.putString(com.centri.mypropane.fragments.SuccessFragment.MSG, "Account information has successfully been updated.");
-                    bundle.putString(com.centri.mypropane.fragments.SuccessFragment.BUTTON_TITLE, "Back to Main Dashboard");
-                    bundle.putSerializable(com.centri.mypropane.fragments.SuccessFragment.NAV_TYPE, Enums.SuccessNavigationType.DASHBOARD);
+                    bundle.putString(com.centri.centri_master_app.fragments.SuccessFragment.MSG, "Account information has successfully been updated.");
+                    bundle.putString(com.centri.centri_master_app.fragments.SuccessFragment.BUTTON_TITLE, "Back to Main Dashboard");
+                    bundle.putSerializable(com.centri.centri_master_app.fragments.SuccessFragment.NAV_TYPE, Enums.SuccessNavigationType.DASHBOARD);
                     navController.navigate(id, bundle);
                 }
             }

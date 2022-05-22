@@ -48,7 +48,6 @@ public class AccountActivity extends AppCompatActivity {
             navController = navHostFragment.getNavController();
             NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         }
-
     }
 
     @Override

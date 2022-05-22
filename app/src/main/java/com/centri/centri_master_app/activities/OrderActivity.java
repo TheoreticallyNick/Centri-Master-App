@@ -64,12 +64,5 @@ public class OrderActivity extends AppCompatActivity {
             navController.setGraph(navGraph);
         }
 
-
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_add_device, menu);
-        return true;
     }
 }

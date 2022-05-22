@@ -58,7 +58,7 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_alignParentEnd="true"
-                        app:srcCompat="@drawable/vec_logo" />
+                        app:srcCompat="@drawable/ic_blueantenna" />
                 </RelativeLayout>
 
                 <ScrollView
@@ -95,6 +95,7 @@
                             android:layout_height="wrap_content"
                             android:paddingStart="0dp"
                             android:paddingEnd="15dp"
+                            android:layout_marginTop="10dp"
                             android:text="Enter Code"
                             android:fontFamily="@font/muli"
                             android:textSize="20sp"
@@ -119,6 +120,7 @@
                             android:layout_height="wrap_content"
                             android:paddingStart="0dp"
                             android:paddingEnd="15dp"
+                            android:layout_marginTop="10dp"
                             android:text="New Password"
                             android:fontFamily="@font/muli"
                             android:textSize="20sp"
@@ -144,6 +146,7 @@
                             android:paddingStart="0dp"
                             android:paddingEnd="15dp"
                             android:text="Confirm New Password"
+                            android:layout_marginTop="10dp"
                             android:fontFamily="@font/muli"
                             android:textSize="20sp"
                             android:textColor="@color/colorSecondaryGrey" />

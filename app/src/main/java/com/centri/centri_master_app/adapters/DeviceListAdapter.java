@@ -24,7 +24,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.centri.centri_master_app.R;
 import com.centri.centri_master_app.data.ApiManager;
 import com.centri.centri_master_app.data.models.DeviceModel;
-import com.centri.mypropane.databinding.ItemDeviceBinding;
+import com.centri.centri_master_app.databinding.ItemDeviceBinding;
 import com.centri.centri_master_app.interfaces.ApiCallback;
 import com.centri.centri_master_app.utils.Constants;
 import com.centri.centri_master_app.utils.LogUtil;

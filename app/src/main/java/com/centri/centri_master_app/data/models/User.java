@@ -20,7 +20,7 @@ import java.io.Serializable;
 
 @Keep
 public class User implements Serializable {
-    public String UserLast, UserFirst, UserEmail, UserPass, UserPassConf, UserPhone, UserCode, UserProvider;
+    public String UserLast, UserFirst, UserEmail, UserPass, UserPassConf, UserPhone, UserCode, UserProvider, UserStreet, UserCity, UserState, UserZip;
 
     public User() {
         this.UserLast = "";
@@ -30,5 +30,9 @@ public class User implements Serializable {
         this.UserPassConf = "";
         this.UserPhone = "";
         this.UserCode = "";
+        this.UserStreet = "";
+        this.UserCity = "";
+        this.UserState = "";
+        this.UserZip = "";
     }
 }

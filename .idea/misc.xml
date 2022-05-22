@@ -20,11 +20,15 @@
         <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/activity_login.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/activity_main.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/activity_order.xml" value="0.27291666666666664" />
-        <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/activity_signup.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/activity_signup.xml" value="0.1" />
+        <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/activity_signup_1.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/activity_signup_2.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/activity_signup_3.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/activity_signup_auth.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/activity_signup_return.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/activity_splash.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/app_bar_main.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/content_main.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/fragment_account.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/fragment_add_device.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/fragment_dashboard.xml" value="0.27291666666666664" />
@@ -36,6 +40,14 @@
         <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/fragment_order_confirm.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/fragment_order_detail.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/fragment_request_monitor.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/fragment_signup_auth.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/fragment_signup_input_1.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/fragment_signup_input_2.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/fragment_signup_input_3.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/fragment_signup_success.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/fragment_signup_user_address.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/fragment_signup_user_info.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/fragment_signup_user_pass.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/fragment_success.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/fragment_verification.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/nicol/AndroidStudioProjects/CentriMasterApp/app/src/main/res/layout/item_device.xml" value="0.27291666666666664" />

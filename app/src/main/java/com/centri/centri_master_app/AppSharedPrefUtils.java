@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 public class AppSharedPrefUtils {
-    private String NAME = "com.centri.mypropane";
+    private String NAME = "com.centri.centri_main_app";
     private String USER = "user";
 
     private SharedPreferences preferences;

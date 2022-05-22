@@ -16,30 +16,56 @@
 
 package com.centri.centri_master_app.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import androidx.navigation.NavController;
+import androidx.navigation.NavGraph;
+import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
-import com.amplifyframework.auth.AuthUserAttribute;
-import com.amplifyframework.auth.AuthUserAttributeKey;
-import com.amplifyframework.auth.options.AuthSignUpOptions;
-import com.amplifyframework.core.Amplify;
-import com.centri.centri_master_app.data.models.User;
 import com.centri.centri_master_app.databinding.ActivitySignupBinding;
-import com.centri.centri_master_app.utils.DialogUtils;
-import com.centri.centri_master_app.utils.EmailUtil;
-import com.centri.centri_master_app.utils.FunctionUtils;
+import com.centri.centri_master_app.utils.Constants;
 import com.centri.centri_master_app.utils.LogUtil;
-import com.centri.centri_master_app.utils.PhoneUtil;
 import com.centri.centri_master_app.R;
 
-import java.util.ArrayList;
+public class SignUpActivity extends AppCompatActivity {
 
+    //private AppBarConfiguration mAppBarConfiguration;
+    private ActivitySignupBinding binding;
+    private NavController navController;
+    NavHostFragment navHostFragment;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_signup);
+        binding.setLifecycleOwner(this);
+
+        navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+        NavController navController = navHostFragment.getNavController();
+
+        NavGraph navGraph = navController.getNavInflater().inflate(R.navigation.signup_navigation);
+        navGraph.setStartDestination(R.id.signUpUserInfoFragment);
+        navController.setGraph(navGraph);
+        //NavigationUI.setupWithNavController(binding.bottomNavView, navController);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (getSupportFragmentManager().getBackStackEntryCount() == 1) {
+            finish();
+        } else {
+            getSupportFragmentManager().popBackStack();
+        }
+    }
+}
+
+
+/*
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
 
     String TAG = SignUpActivity.class.getSimpleName();
@@ -50,7 +76,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_signup);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_signup_1);
         binding.setLifecycleOwner(this);
         binding.setOnClick(this);
         binding.setUser(user);
@@ -212,3 +238,4 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         );
     }
 }
+*/

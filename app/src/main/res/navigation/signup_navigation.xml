@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signup_navigation"
+    app:startDestination="@id/signUpUserInfoFragment">
+
+    <fragment
+        android:id="@+id/signUpUserInfoFragment"
+        android:name="com.centri.centri_master_app.fragments.SignUpUserInfoFragment"
+        android:label="SignUpUserInfoFragment" >
+        <action
+            android:id="@+id/action_signUpUserInfoFragment_to_signUpUserAddressFragment"
+            app:destination="@id/signUpUserAddressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpUserAddressFragment"
+        android:name="com.centri.centri_master_app.fragments.SignUpUserAddressFragment"
+        android:label="SignUpUserAddressFragment" >
+        <action
+            android:id="@+id/action_signUpUserAddressFragment_to_signUpUserPassFragment"
+            app:destination="@id/signUpUserPassFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpUserPassFragment"
+        android:name="com.centri.centri_master_app.fragments.SignUpUserPassFragment"
+        android:label="SignUpUserPassFragment" >
+        <action
+            android:id="@+id/action_signUpUserPassFragment_to_signUpAuthFragment"
+            app:destination="@id/signUpAuthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpAuthFragment"
+        android:name="com.centri.centri_master_app.fragments.SignUpAuthFragment"
+        android:label="SignUpAuthFragment" >
+        <action
+            android:id="@+id/action_signUpAuthFragment_to_signUpSuccessFragment"
+            app:destination="@id/signUpSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpSuccessFragment"
+        android:name="com.centri.centri_master_app.fragments.SignUpSuccessFragment"
+        android:label="SignUpSuccessFragment" >
+        <action
+            android:id="@+id/action_signUpSuccessFragment_to_signUpUserInfoFragment"
+            app:destination="@id/signUpUserInfoFragment" />
+    </fragment>
+</navigation>

@@ -37,6 +37,7 @@ public class AddDeviceActivity extends AppCompatActivity {
     public String deviceId;
     public String deviceAuth;
     public Document device;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +52,6 @@ public class AddDeviceActivity extends AppCompatActivity {
             navController = navHostFragment.getNavController();
             //NavigationUI.setupActionBarWithNavController(this, navController,mAppBarConfiguration);
         }
-
     }
 
     @Override

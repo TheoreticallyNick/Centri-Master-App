@@ -63,17 +63,7 @@
             android:windowSoftInputMode="stateHidden"
             android:screenOrientation="portrait"/>
         <activity
-            android:name="com.centri.centri_master_app.activities.SignUpSuccessActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden"
-            android:screenOrientation="portrait"/>
-        <activity
             android:name="com.centri.centri_master_app.activities.ForgotPassSuccessActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.centri.centri_master_app.activities.SignUpAuthActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden"
             android:screenOrientation="portrait"/>
