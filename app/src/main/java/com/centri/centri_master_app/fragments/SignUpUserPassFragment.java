@@ -3,6 +3,7 @@ package com.centri.centri_master_app.fragments;
 import static com.amazonaws.mobile.auth.core.internal.util.ThreadUtils.runOnUiThread;
 
 import android.app.Activity;
+import android.content.ContentProvider;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -140,6 +141,7 @@ public class SignUpUserPassFragment extends Fragment implements View.OnClickList
         String user_city = user.UserCity;
         String user_state = user.UserState;
         String user_zip = user.UserZip;
+        String user_provider = Constants.PROVIDER;
 
         Bundle bundle = new Bundle();
         String json = new Gson().toJson(user);
@@ -155,6 +157,7 @@ public class SignUpUserPassFragment extends Fragment implements View.OnClickList
         attributes.add(new AuthUserAttribute(AuthUserAttributeKey.custom("custom:city"), user_city));
         attributes.add(new AuthUserAttribute(AuthUserAttributeKey.custom("custom:state"), user_state));
         attributes.add(new AuthUserAttribute(AuthUserAttributeKey.custom("custom:zip"), user_zip));
+        attributes.add(new AuthUserAttribute(AuthUserAttributeKey.custom("custom:provider"), user_provider));
 
         loadingDialog.show();
         Amplify.Auth.signUp(

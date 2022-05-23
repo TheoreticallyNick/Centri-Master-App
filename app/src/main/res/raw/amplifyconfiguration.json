@@ -9,12 +9,20 @@
                 "IdentityManager": {
                     "Default": {}
                 },
+                "CredentialsProvider": {
+                    "CognitoIdentity": {
+                        "Default": {
+                            "PoolId": "us-east-1:06f8f3bd-ecef-433e-af0f-da04f65fa061",
+                            "Region": "us-east-1"
+                        }
+                    }
+                },
                 "CognitoUserPool": {
                     "Default": {
-                        "PoolId": "us-east-1_MEC7lqjO6",
-                        "AppClientId": "2khd2hf07gijaehdbfv7d4citm",
+                        "PoolId": "us-east-1_iGTUlPty7",
+                        "AppClientId": "647nc59kkhvqvt3pebqihb1q42",
                         "Region": "us-east-1",
-                        "AppClientSecret": "as5555drr57msttf1edh6nfb75f1p08h2rj50gbh3vuho7e3n0g"
+                        "AppClientSecret": "1kmbhpl76cftf1todmk2k2ji98kbu4dm25ks9adg9rglkhr6q2h"
                     }
                 },
                 "Auth": {

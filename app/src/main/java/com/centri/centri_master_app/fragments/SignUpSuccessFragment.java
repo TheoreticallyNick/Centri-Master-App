@@ -16,6 +16,7 @@
 
 package com.centri.centri_master_app.fragments;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -83,8 +84,12 @@ public class SignUpSuccessFragment extends Fragment implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btnReturn:
-                startActivity(new Intent(getContext(), LoginActivity.class));
+            case R.id.tv_return:
+                Activity activity = getActivity();
+                if (activity != null) {
+                    startActivity(new Intent(activity, com.centri.centri_master_app.activities.LoginActivity.class));
+                    activity.finish();
+                }
                 break;
         }
     }

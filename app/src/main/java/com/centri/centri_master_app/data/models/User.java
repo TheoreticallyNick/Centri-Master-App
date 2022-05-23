@@ -16,6 +16,8 @@ package com.centri.centri_master_app.data.models;
 
 import androidx.annotation.Keep;
 
+import com.centri.centri_master_app.R;
+
 import java.io.Serializable;
 
 @Keep

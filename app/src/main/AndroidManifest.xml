@@ -45,7 +45,7 @@
         <activity
             android:name="com.centri.centri_master_app.activities.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="stateHidden"
+            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="portrait"/>
         <activity
             android:name="com.centri.centri_master_app.activities.SignUpActivity"

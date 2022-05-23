@@ -11,7 +11,11 @@
         android:label="SignUpUserInfoFragment" >
         <action
             android:id="@+id/action_signUpUserInfoFragment_to_signUpUserAddressFragment"
-            app:destination="@id/signUpUserAddressFragment" />
+            app:destination="@id/signUpUserAddressFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/signUpUserAddressFragment"
@@ -19,7 +23,11 @@
         android:label="SignUpUserAddressFragment" >
         <action
             android:id="@+id/action_signUpUserAddressFragment_to_signUpUserPassFragment"
-            app:destination="@id/signUpUserPassFragment" />
+            app:destination="@id/signUpUserPassFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/signUpUserPassFragment"
@@ -27,7 +35,11 @@
         android:label="SignUpUserPassFragment" >
         <action
             android:id="@+id/action_signUpUserPassFragment_to_signUpAuthFragment"
-            app:destination="@id/signUpAuthFragment" />
+            app:destination="@id/signUpAuthFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/signUpAuthFragment"
@@ -35,14 +47,15 @@
         android:label="SignUpAuthFragment" >
         <action
             android:id="@+id/action_signUpAuthFragment_to_signUpSuccessFragment"
-            app:destination="@id/signUpSuccessFragment" />
+            app:destination="@id/signUpSuccessFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/signUpSuccessFragment"
         android:name="com.centri.centri_master_app.fragments.SignUpSuccessFragment"
         android:label="SignUpSuccessFragment" >
-        <action
-            android:id="@+id/action_signUpSuccessFragment_to_signUpUserInfoFragment"
-            app:destination="@id/signUpUserInfoFragment" />
     </fragment>
 </navigation>
